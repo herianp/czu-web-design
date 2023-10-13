@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+header h3 {
+    margin: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #333;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2em;
+}
+.container {
+    display: flex;
+flex-direction: column;
+    align-items: center;
+ }
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+article {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    width: 80%;
+}
+
+/* BUTTON - Přidání do košíku */
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+.add-to-cart-button:hover {
+    padding: 12px 22px;
+    border: none;
+    cursor: pointer;
+}
+.add-to-cart-button:active {
+    background-color:#047208;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    left: 0;
+    bottom: 0;
+    background-color: #4CAF50;
+    color: white;
+}
