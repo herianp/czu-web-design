@@ -4,9 +4,6 @@ body {
     padding: 0;
     background-color: #ffffff;
 }
-.homepage-main {
-    margin: 0% 10%;
-}
 header {
     background-color: #4CAF50;
     color: white;
@@ -21,7 +18,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    background-color: #333;
+    background-color: #1E2326;
 }
 nav a {
     color: white;
@@ -31,10 +28,11 @@ nav a {
 }
 .courses-container {
     margin: 0;
+    margin: 0% 10%;
 }
 .container {
     display: flex;
-flex-direction: column;
+    flex-direction: column;
     align-items: center;
  }
 .nav-container{
@@ -90,6 +88,7 @@ footer {
     min-width: 250px;
     flex: 1;
     margin: 5px;
+    background-color: #c7f8c9;
 }
 .product article {
     width: 100%;
@@ -114,7 +113,7 @@ footer {
 
 /* Category */
 .product-category {
-    background-color: red;
+    /* background-color: red; */
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -123,5 +122,25 @@ footer {
 }
 /* Sekce */
 section h1 {
-    margin-bottom: 5px;
+    margin: 20px;
+}
+
+/* Mobilni sekce CSS */
+@media (max-width: 768px) {
+    .product {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+}
+/* Homepage */
+.homepage-main-container {
+    background-image: url('../img/homepage_img.png');
+    background-size: auto 100%;
+    background-position: right center;
+    padding: 0 10%;
+    min-height: 300px;
+}
+.homepage-main-container h1, .homepage-main-container p {
+    margin: 0 0 25px 0;
+    color: rgb(255, 255, 255);
 }
