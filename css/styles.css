@@ -63,6 +63,10 @@ article {
   .pc-nav {
     display: none;
   }
+  .searchbox{
+    width: 80%;
+    height: 25px;
+  }
   .mobile-nav {
     display: block;
     display: flex;
@@ -221,3 +225,32 @@ section h1 {
   margin: 6px 0;
   transition: 0.4s;
 }
+
+.search-container {
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+  background-color: #1e2326;
+}
+
+.search-btn {
+  display: flex;
+  border: none;
+  cursor: pointer;
+  background-color: #4caf50;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  max-height: 100%;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  width: auto;
+}
+
+.search-btn img {
+  width: 28px;
+  height: 26px;
+  padding: 2px;
+  padding-left: 4px;
+}
+
