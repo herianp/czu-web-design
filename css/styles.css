@@ -64,7 +64,7 @@ article {
     display: none;
   }
   .searchbox{
-    width: 80%;
+    width: 17rem;
     height: 25px;
   }
   .mobile-nav {
@@ -253,5 +253,10 @@ section h1 {
   height: 26px;
   padding: 2px;
   padding-left: 4px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center; /* Zarovná prvky vertikálně do středu */
 }
 

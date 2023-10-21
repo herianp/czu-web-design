@@ -7,55 +7,18 @@
     <link rel="stylesheet" href="css/styles.css">
     <style></style>
 </head>
-<body>
-    <header>
-        <h3>Vítejte v našem E-shopu s Kurzy!</h3>
-        <nav class="pc-nav">
-            <div class="nav-container">
-                <a href="index.html">Domů</a>
-                <a href="kategorie.html">Kategorie</a>
-                <a href="kontakty.html">Kontakt</a>
-            </div>
-            <div class="nav-container">
-                <input type="text" placeholder="Hledat..." class="searchbox">
-                <a href="kosik.html">
-                    <img src="img/cart.png" alt="Košík" width="25">
-                </a>
-                <a href="profil.html">
-                    <img src="img/account.png" alt="Profil" width="25">
-                </a>
-            </div>
-        </nav>
-        <nav class="mobile-nav">
-            <div class="dropdown">
-                <a class="dropbtn" tabindex="0">
-                    <img src="img/dropdown_menu_green.png" style="max-width: 50px;" alt="Button Image">
-                  </a>
-                <div class="dropdown-content">
-                    <a href="index.html">Domů</a>
-                    <a href="kategorie.html">Kategorie</a>
-                    <a href="kontakty.html">Kontakty</a>
-                    <a href="kosik.html">Košík</a>
-                    <a href="profil.html">Profil</a>
-                </div>
-            </div>
-        </nav>
-        <div class="mobile-nav search-container">
-            <button class="search-btn">
-                <img src="img/magnifier.svg" alt="Hledat"> <!-- Předpokládám, že máte obrázek lupy s názvem lupa.png v adresáři img -->
-            </button>
-            <input type="text" placeholder="Hledat..." class="searchbox">
-        </div>
-    </header>
+<body id="searchPage">
+    <div id="headerContainer"></div>
     <section class="courses-container">
         <article>
-            <h2>Hlavní informace</h2>
-            <p>Tento web je urcen pro skupinu rob, petis a onis</p>
-            <aside>Kdyz tuhle cast vyhodim tak mi to nevadi</aside>
+            <h2>Výsledek Vyhledávání: <span id="searchQuery"></span></h2>            
+            <aside>Bohužel nebyly nalezeny žádné výsledky</aside>
         </article>
     </section>
     <footer>
         <p>&copy; Studenti PEF 2023 - Všechna práva vyhrazena.</p>
     </footer>
+    <script src="./functions/helpers.js"></script>
+    <script src="./functions/header.js"></script>
 </body>
 </html>
