@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function() {    
     var headerContent = `
     <header>                        
         <h3>Vítejte v našem E-shopu s Kurzy!</h3>
@@ -45,6 +45,6 @@ window.onload = function() {
         </div>
     </header>
     `;
-        
+
     document.getElementById("headerContainer").innerHTML = headerContent;
 }
