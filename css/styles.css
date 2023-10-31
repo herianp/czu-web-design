@@ -132,6 +132,15 @@ article {
   flex-direction: row;
   align-items: center;
 }
+.sum-cart {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sum-cart p {
+  font-weight: bold;
+}
 .product-cart div {
   margin-left: 20px;
 }
