@@ -127,7 +127,30 @@ article {
   border: none;
   cursor: pointer;
 }
-
+.product-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.product-cart div {
+  margin-left: 20px;
+}
+.product-cart img {
+  width: 10rem;
+}
+.finish-cart{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e2326;
+}
+.finish-cart a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 footer {
   text-align: center;
   padding: 1em;
@@ -203,6 +226,20 @@ section h1 {
 }
 .homepage-main-container h1 {
   margin: 0 0 25px 0;
+}
+
+.homepage-main-container p {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.homepage-main-container p a {
+  color: gray;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Your regular desktop styles here */
