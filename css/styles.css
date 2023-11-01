@@ -1,6 +1,6 @@
 :root {
   --dark-black-color: #1e2326;
-  --dark-green-color: #4caf50;
+  --dark-green-color: #9AF29D;
 }
 body {
   font-family: Arial, sans-serif;
@@ -9,7 +9,7 @@ body {
   background-color: #ffffff;
 }
 header {
-  background-color: var(--dark-green-color);
+  background-color: #4caf50;
   color: white;
   text-align: center;
   padding-top: 5px;
@@ -344,4 +344,33 @@ section h1 {
 
 .custom-form-submit:hover {
   background-color: #0056b3;
+}
+
+.menu-category{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-category-container{
+  display: flex;
+  justify-content: center;
+}
+.menu-category-container button {
+  background-color:var(--dark-black-color);
+  color: white;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.menu-category-container button:hover {
+  border: none;
+  cursor: pointer;
+  background-color: var(--dark-black-color);
 }
