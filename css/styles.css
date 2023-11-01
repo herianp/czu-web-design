@@ -306,3 +306,43 @@ section h1 {
   align-items: center; /* Zarovná prvky vertikálně do středu */
 }
 
+/* custom-form-styles.css */
+.custom-form-body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.custom-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-form-label {
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
+}
+
+.custom-form-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px -10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.custom-form-submit {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.custom-form-submit:hover {
+  background-color: #0056b3;
+}

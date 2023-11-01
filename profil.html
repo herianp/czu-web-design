@@ -7,14 +7,36 @@
     <link rel="stylesheet" href="css/styles.css">
     <style></style>
 </head>
-<body>
+<body class="custom-form-body">
     <div id="headerContainer"></div>
     <section class="courses-container">
-        <article>
-            <h2>LOGIN A REGISTRACE ?</h2>
-            <p>Sem bych vlozil nejaky form</p>
-            <aside>Kdyz tuhle cast vyhodim tak mi to nevadi</aside>
-        </article>
+        <h2>Formulář pro registraci</h2>
+        <form action="index.html" method="post" class="custom-form">
+            <label for="reg-username" class="custom-form-label">Uživatelské jméno:</label>
+            <input type="text" id="reg-username" name="username" class="custom-form-input" required><br>
+
+            <label for="reg-email" class="custom-form-label">Email:</label>
+            <input type="email" id="reg-email" name="email" class="custom-form-input" required><br>
+
+            <label for="reg-password" class="custom-form-label">Heslo:</label>
+            <input type="password" id="reg-password" name="password" class="custom-form-input" required><br>
+
+            <label for="reg-confirm-password" class="custom-form-label">Potvrzení hesla:</label>
+            <input type="password" id="reg-confirm-password" name="confirm_password" class="custom-form-input" required><br>
+
+            <input type="submit" value="Registrovat" class="custom-form-submit">
+        </form>
+
+        <h2>Formulář pro přihlášení</h2>
+        <form action="index.html" method="post" class="custom-form">
+            <label for="login-username" class="custom-form-label">Uživatelské jméno:</label>
+            <input type="text" id="login-username" name="username" class="custom-form-input" required><br>
+
+            <label for="login-password" class="custom-form-label">Heslo:</label>
+            <input type="password" id="login-password" name="password" class="custom-form-input" required><br>
+
+            <input type="submit" value="Přihlásit" class="custom-form-submit">
+        </form>
     </section>
     <footer>
         <p>&copy; Studenti PEF 2023 - Všechna práva vyhrazena.</p>
