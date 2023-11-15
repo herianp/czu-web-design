@@ -17,12 +17,12 @@
         <section class="menu-category">
             <h2>KATEGORIE</h2>
             <div class="menu-category-container">
-                <button>Vzdělávání</button>
-                <button>Sport</button>
-                <button>Hudba</button>
+                <button onclick="toggleVisibility(['class2', 'class3'], ['class1'])">Vzdělávání</button>
+                <button onclick="toggleVisibility(['class2', 'class3'], ['class1'])">Sport</button>
+                <button onclick="toggleVisibility(['class2', 'class3'], ['class1'])">Hudba</button>
             </div>
         </section>
-        <section class="courses-container">
+        <section class="courses-container education-container">
             <h1>Kurzy s nejvyšší slevou</h1>
             <div class="product-category">
                 <div class="product">
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </section>
-        <section class="courses-container">
+        <section class="courses-container sport-container">
             <h1>Nejprodávanější kurzy</h1>
             <div class="product-category">
                 <div class="product">
@@ -116,7 +116,7 @@
                 </div>
             </div>
         </section>
-        <section class="courses-container">
+        <section class="courses-container music-container">
             <h1>Hudební kurzy</h1>
             <div class="product-category">
                 <div class="product">
@@ -162,5 +162,6 @@
         <p>&copy; Studenti PEF 2023 - Všechna práva vyhrazena.</p>
     </footer>
     <script src="./functions/header.js"></script>
+    <script src="./functions/hideClasses.js"></script>
 </body>
 </html>
