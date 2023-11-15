@@ -371,6 +371,9 @@ section h1 {
 .menu-category-container{
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 10px;
 }
 .menu-category-container button {
   background-color:var(--dark-black-color);
@@ -395,10 +398,33 @@ section h1 {
 
 }
 
-.education-container {
+.sport-container {
   
 }
 
-.education-container {
+.music-container {
   
+}
+
+.category-grid-cart {
+  display: grid;
+  grid-template-columns:
+  100px 100px 150px auto 150px 100px 100px;
+  grid-template-rows:
+  220px 220px;
+  align-items: center;
+}
+
+.category-sum-cart {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-grid-cart-p {
+  grid-column: 2 / 4;
+  grid-row: 1 / -1;
 }

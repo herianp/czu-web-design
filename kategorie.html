@@ -17,13 +17,14 @@
         <section class="menu-category">
             <h2>KATEGORIE</h2>
             <div class="menu-category-container">
-                <button onclick="toggleVisibility(['class2', 'class3'], ['class1'])">Vzdělávání</button>
-                <button onclick="toggleVisibility(['class2', 'class3'], ['class1'])">Sport</button>
-                <button onclick="toggleVisibility(['class2', 'class3'], ['class1'])">Hudba</button>
+                <button id="all-category-btn" onclick="toggleVisibility([], ['education-container','sport-container', 'music-container'])">Vše</button>
+                <button id="education-category-btn" onclick="toggleVisibility(['sport-container', 'music-container'], ['education-container'])">Vzdělávání</button>
+                <button id="sport-category-btn" onclick="toggleVisibility(['education-container', 'music-container'], ['sport-container'])">Sport</button>
+                <button id="music-category-btn" onclick="toggleVisibility(['sport-container', 'education-container'], ['music-container'])">Hudba</button>
             </div>
         </section>
         <section class="courses-container education-container">
-            <h1>Kurzy s nejvyšší slevou</h1>
+            <h1>Vzdělávací kurzy</h1>
             <div class="product-category">
                 <div class="product">
                     <img src="img/courses/golf_course.png" alt="Kurz Golfu">
@@ -73,7 +74,7 @@
             </div>
         </section>
         <section class="courses-container sport-container">
-            <h1>Nejprodávanější kurzy</h1>
+            <h1>Sportovní kurzy</h1>
             <div class="product-category">
                 <div class="product">
                     <img src="img/courses/coaching_course.png" alt="Kurz pro trenéry">
@@ -157,6 +158,23 @@
                 </div>
             </div>
         </section>
+        <div class="category-grid-cart">
+            <div class="category-sum-cart">
+                <div class="product">
+                    <img src="img/courses/sound_course.png" alt="DJ Music kurz">
+                    <article>
+                        <h3>DJ Music kurz</h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        </p>
+                        <h3 style="text-align: center;">699 kč</h3>
+                        <aside>Tento kurz absolvoval i DJ SUNNY.</aside>
+                    </article>
+                </div>
+            </div>
+            <p class="category-grid-cart-p">Naposledy zakoupené kurzy</p>
+        </div>
     </main>
     <footer>
         <p>&copy; Studenti PEF 2023 - Všechna práva vyhrazena.</p>
