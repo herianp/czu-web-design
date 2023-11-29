@@ -14,8 +14,17 @@
                 <h1>Kurzy z kterých si vybere každý!</h1>
                 <p>Spousta věcí se dá naučit z domova a levně!</p>
         </div>
-        <section class="courses-container">
-            <h1>Kurzy s nejvyšší slevou</h1>
+        <section class="menu-category">
+            <h1 style="font-size: 35px;">KATEGORIE</h1>
+            <div class="menu-category-container">
+                <button id="all-category-btn" onclick="toggleVisibility([], ['education-container','sport-container', 'music-container'], 'all-category-btn')">Vše</button>
+                <button id="education-category-btn" onclick="toggleVisibility(['sport-container', 'music-container'], ['education-container'], 'education-category-btn')">Vzdělávání</button>
+                <button id="sport-category-btn" onclick="toggleVisibility(['education-container', 'music-container'], ['sport-container'], 'sport-category-btn')">Sport</button>
+                <button id="music-category-btn" onclick="toggleVisibility(['sport-container', 'education-container'], ['music-container'], 'music-category-btn')">Hudba</button>
+            </div>
+        </section>
+        <section class="courses-container education-container">
+            <h1>Vzdělávací kurzy</h1>
             <div class="product-category">
                 <div class="product">
                     <img src="img/courses/golf_course.png" alt="Kurz Golfu">
@@ -64,8 +73,8 @@
                 </div>
             </div>
         </section>
-        <section class="courses-container">
-            <h1>Nejprodávanější kurzy</h1>
+        <section class="courses-container sport-container">
+            <h1>Sportovní kurzy</h1>
             <div class="product-category">
                 <div class="product">
                     <img src="img/courses/coaching_course.png" alt="Kurz pro trenéry">
@@ -108,7 +117,7 @@
                 </div>
             </div>
         </section>
-        <section class="courses-container">
+        <section class="courses-container music-container">
             <h1>Hudební kurzy</h1>
             <div class="product-category">
                 <div class="product">
@@ -149,10 +158,18 @@
                 </div>
             </div>
         </section>
+        <div class="category-grid-cart">
+            <div class="category-sum-cart">
+                    <img src="img/courses/sound_course.png" alt="DJ Music kurz" style="max-width: 150px;">
+                    <img src="img/courses/math_course.png" alt="DJ Music kurz" style="max-width: 150px;">
+            </div>
+            <p class="category-grid-cart-p">Naposledy zakoupené kurzy</p>
+        </div>
     </main>
     <footer>
         <p>&copy; Studenti PEF 2023 - Všechna práva vyhrazena.</p>
     </footer>
     <script src="./functions/header.js"></script>
+    <script src="./functions/hideClasses.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 :root {
   --dark-black-color: #1e2326;
-  --dark-green-color: #4caf50;
+  --dark-green-color: #9AF29D;
 }
 body {
   font-family: Arial, sans-serif;
@@ -9,7 +9,7 @@ body {
   background-color: #ffffff;
 }
 header {
-  background-color: var(--dark-green-color);
+  background-color: #4caf50;
   color: white;
   text-align: center;
   padding-top: 5px;
@@ -53,6 +53,20 @@ article {
 /* Mobilni sekce CSS */
 .mobile-nav {
   display: none;
+}
+.grid-cart {
+  display: grid;
+  grid-template-columns:
+  40px 50px auto 50px 40px;
+  grid-template-rows:
+  80px auto;
+  align-items: end;
+}
+.grid-cart-p{
+  grid-column: 3;
+  grid-row: 1;
+  text-align: center;
+  font-size: small;
 }
 @media (max-width: 768px) {
   .product {
@@ -105,6 +119,10 @@ article {
   .dropdown:focus-within .dropbtn {
     color: black;
   }
+
+  .category-sum-cart img {
+    width: 100px;
+  }
 }
 /* KONEC Mobilni sekce CSS */
 
@@ -133,6 +151,8 @@ article {
   align-items: center;
 }
 .sum-cart {
+  grid-column: 1 / -1;
+  grid-row: 3;
   height: 50px;
   display: flex;
   align-items: center;
@@ -309,7 +329,6 @@ section h1 {
 /* custom-form-styles.css */
 .custom-form-body {
   font-family: Arial, sans-serif;
-  margin: 20px;
 }
 
 .custom-form {
@@ -372,4 +391,64 @@ grid-row-end: row2;
 grid-column-end: col4;
 grid-row-start: row2;
 grid-row-end: bottom;
+.menu-category{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-category-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 10px;
+}
+.menu-category-container button {
+  background-color:var(--dark-black-color);
+  color: white;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.menu-category-container button:hover {
+  border: none;
+  cursor: pointer;
+  background-color: var(--dark-black-color);
+}
+
+
+.category-grid-cart {
+  display: grid;
+  grid-template-columns:
+  10px 100px auto auto 100px 10px;
+  grid-template-rows:
+  220px 220px;
+  align-items: center;
+}
+
+.category-sum-cart {
+  grid-column: 4 / -1;
+  grid-row: 1 / -1;
+  max-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-left: 20px;
+
+}
+
+.category-grid-cart-p {
+  grid-column: 2 / 4;
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
