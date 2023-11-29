@@ -17,10 +17,10 @@
         <section class="menu-category">
             <h2>KATEGORIE</h2>
             <div class="menu-category-container">
-                <button id="all-category-btn" onclick="toggleVisibility([], ['education-container','sport-container', 'music-container'])">Vše</button>
-                <button id="education-category-btn" onclick="toggleVisibility(['sport-container', 'music-container'], ['education-container'])">Vzdělávání</button>
-                <button id="sport-category-btn" onclick="toggleVisibility(['education-container', 'music-container'], ['sport-container'])">Sport</button>
-                <button id="music-category-btn" onclick="toggleVisibility(['sport-container', 'education-container'], ['music-container'])">Hudba</button>
+                <button id="all-category-btn" onclick="toggleVisibility([], ['education-container','sport-container', 'music-container'], 'all-category-btn')">Vše</button>
+                <button id="education-category-btn" onclick="toggleVisibility(['sport-container', 'music-container'], ['education-container'], 'education-category-btn')">Vzdělávání</button>
+                <button id="sport-category-btn" onclick="toggleVisibility(['education-container', 'music-container'], ['sport-container'], 'sport-category-btn')">Sport</button>
+                <button id="music-category-btn" onclick="toggleVisibility(['sport-container', 'education-container'], ['music-container'], 'music-category-btn')">Hudba</button>
             </div>
         </section>
         <section class="courses-container education-container">

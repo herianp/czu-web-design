@@ -1,4 +1,4 @@
-function toggleVisibility(hideClasses, showClasses) {
+function toggleVisibility(hideClasses, showClasses, buttonId) {
   // Skryje všechny třídy v seznamu hideClasses
   hideClasses.forEach(function(className) {
     document.querySelectorAll('.' + className).forEach(function(element) {
@@ -11,5 +11,16 @@ function toggleVisibility(hideClasses, showClasses) {
     document.querySelectorAll('.' + className).forEach(function(element) {
       element.style.display = 'block';
     });
+  });
+
+  // Change the color of the specified button and reset others
+  document.querySelectorAll('button').forEach(function(button) {
+    if (button.id === buttonId) {
+      button.style.backgroundColor = '#9AF29D';
+      button.style.color = 'black'
+    } else {
+      button.style.backgroundColor = 'black';
+      button.style.color = 'white'
+    }
   });
 }
