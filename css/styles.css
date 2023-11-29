@@ -346,3 +346,30 @@ section h1 {
 .custom-form-submit:hover {
   background-color: #0056b3;
 }
+
+.grid-back {
+display: grid;
+grid-template-columns:
+[col1] 10%  [col2] 40% [col3] 40% [col4] 10%;
+grid-template-rows: 
+[top] 10% [row1] 20% [row2] 20% [row3] 20% [row4] 20% [bottom] 10%;
+
+
+gap: 10px;
+padding: 20px;
+
+}
+
+.header-grid{
+  grid-column-start: col2;
+grid-column-end: col4;
+grid-row-start: top;
+grid-row-end: row2;
+}
+
+.form1-grid{
+  grid-column-start: col2;
+grid-column-end: col4;
+grid-row-start: row2;
+grid-row-end: bottom;
+}

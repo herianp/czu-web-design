@@ -10,12 +10,56 @@
 <body>
     <div id="headerContainer"></div>
     <section class="courses-container">
-        <article>
-            <h2>Hlavní informace</h2>
-            <p>Tento web je urcen pro skupinu rob, petis a onis</p>
-            <aside>Kdyz tuhle cast vyhodim tak mi to nevadi</aside>
-        </article>
+        
+        
     </section>
+    <div class="grid-back">
+    <article class="header-grid" >
+    <h1>Informace o Dopravě</h1>
+    <p>Zde můžete uvést informace o dostupných možnostech dopravy.</p>
+
+    <h1>Možnosti Platby</h1>
+    <p>Zde můžete uvést různé způsoby platby.</p>
+</article>
+    <form action="zpracuj_objednavku.php" method="post" class="form1-grid">
+       <div >
+        <h2>Informace o Objednávce</h2>
+        <div>
+        <label for="produkt">Produkt:</label>
+        <input type="text" name="produkt" id="produkt">
+    </div>
+        <label for="mnozstvi">Množství:</label>
+        <input type="number" name="mnozstvi" id="mnozstvi">
+
+        <h2>Informace o Zákazníkovi</h2>
+        <div>
+        <label for="jmeno">Jméno:</label>
+        <input type="text" name="jmeno" id="jmeno">
+    </div>
+        <label for="adresa">Adresa:</label>
+        <input type="text" name="adresa" id="adresa">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+        <label for="telefon">Telefon:</label>
+        <input type="tel" name="telefon" id="telefon">
+    
+        <label for="doprava">Způsob dopravy:</label>
+        <select name="doprava" id="doprava">
+            <option value="kurýr">Kurýrem</option>
+            <option value="osobní_vyzvednutí">Osobní vyzvednutí</option>
+        </select>
+         
+        <label for="platba">Způsob platby:</label>
+        <select name="platba" id="platba">
+            <option value="hotovost">Hotovostí při vyzvednutí</option>
+            <option value="kartou">Kartou online</option>
+        </select>
+    </div> 
+        <input type="submit" value="Odeslat objednávku">
+    </form>
+</div>
     <footer>
         <p>&copy; Studenti PEF 2023 - Všechna práva vyhrazena.</p>
     </footer>
