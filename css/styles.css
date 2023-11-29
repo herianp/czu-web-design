@@ -371,7 +371,7 @@ display: grid;
 grid-template-columns:
 [col1] 10%  [col2] 40% [col3] 40% [col4] 10%;
 grid-template-rows: 
-[top] 10% [row1] 20% [row2] 20% [row3] 20% [row4] 20% [bottom] 10%;
+[top] 10% [row1] 20% [row2] 20% [row3] auto [bottom] 10%;
 
 
 gap: 10px;
@@ -391,6 +391,7 @@ grid-row-end: row2;
 grid-column-end: col4;
 grid-row-start: row2;
 grid-row-end: bottom;
+}
 .menu-category{
   display: flex;
   flex-direction: column;
