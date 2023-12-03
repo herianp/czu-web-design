@@ -371,19 +371,21 @@ display: grid;
 grid-template-columns:
 [col1] 10%  [col2] 40% [col3] 40% [col4] 10%;
 grid-template-rows: 
-[top] 10% [row1] 20% [row2] 20% [row3] auto [bottom] 10%;
+[top] 10% [row1] auto [row2]  auto [bottom] 0%;
 
-
-gap: 10px;
-padding: 20px;
+text-align: center;
 
 }
 
 .header-grid{
   grid-column-start: col2;
 grid-column-end: col4;
-grid-row-start: top;
+grid-row-start: 1;
 grid-row-end: row2;
+
+margin: 0;
+padding: 0;
+
 }
 
 .form1-grid{
@@ -391,6 +393,9 @@ grid-row-end: row2;
 grid-column-end: col4;
 grid-row-start: row2;
 grid-row-end: bottom;
+
+
+
 }
 .menu-category{
   display: flex;

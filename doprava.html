@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-shop s Kurzy</title>
     <link rel="stylesheet" href="css/styles.css">
-    <style></style>
+    <style>
+.form1-grid div {
+            margin-bottom: 10px;
+        }
+
+        .form1-grid label {
+            display:block;
+            margin-bottom: 5px;
+        }
+
+    </style>
 </head>
 <body>
     <div id="headerContainer"></div>
@@ -16,10 +26,8 @@
     <div class="grid-back">
     <article class="header-grid" >
     <h1>Informace o Dopravě</h1>
-    <p>Zde můžete uvést informace o dostupných možnostech dopravy.</p>
+    <p>Vyplňte následující infomace.</p>
 
-    <h1>Možnosti Platby</h1>
-    <p>Zde můžete uvést různé způsoby platby.</p>
 </article>
     <form action="zpracuj_objednavku.php" method="post" class="form1-grid">
        <div >
@@ -38,13 +46,13 @@
     </div>
         <label for="adresa">Adresa:</label>
         <input type="text" name="adresa" id="adresa">
-
+<br>
         <label for="email">Email:</label>
         <input type="email" name="email" id="email">
-
+        <br>
         <label for="telefon">Telefon:</label>
         <input type="tel" name="telefon" id="telefon">
-    
+        <br>
         <label for="doprava">Způsob dopravy:</label>
         <select name="doprava" id="doprava">
             <option value="kurýr">Kurýrem</option>
