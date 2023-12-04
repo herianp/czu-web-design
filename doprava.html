@@ -1,76 +1,70 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-shop s Kurzy</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <style>
-.form1-grid div {
-            margin-bottom: 10px;
-        }
+      .form1-grid div {
+        margin-bottom: 10px;
+      }
 
-        .form1-grid label {
-            display:block;
-            margin-bottom: 5px;
-        }
-
+      .form1-grid label {
+        display: block;
+        margin-bottom: 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="headerContainer"></div>
-    <section class="courses-container">
-        
-        
-    </section>
+    <section class="courses-container"></section>
     <div class="grid-back">
-    <article class="header-grid" >
-    <h1>Informace o Dopravě</h1>
-    <p>Vyplňte následující infomace.</p>
-
-</article>
-    <form action="zpracuj_objednavku.php" method="post" class="form1-grid">
-       <div >
-        <h2>Informace o Objednávce</h2>
+      <article class="header-grid">
+        <h1>Informace o Dopravě</h1>
+        <p>Vyplňte následující infomace.</p>
+      </article>
+      <form action="zpracuj_objednavku.php" method="post" class="form1-grid">
         <div>
-        <label for="produkt">Produkt:</label>
-        <input type="text" name="produkt" id="produkt">
-    </div>
-        <label for="mnozstvi">Množství:</label>
-        <input type="number" name="mnozstvi" id="mnozstvi" min="0">
+          <h2>Informace o Objednávce</h2>
+          <div>
+            <label for="produkt">Produkt:</label>
+            <input type="text" name="produkt" id="produkt" />
+          </div>
+          <label for="mnozstvi">Množství:</label>
+          <input type="number" name="mnozstvi" id="mnozstvi" min="0" />
 
-        <h2>Informace o Zákazníkovi</h2>
-        <div>
-        <label for="jmeno">Jméno:</label>
-        <input type="text" name="jmeno" id="jmeno">
-    </div>
-        <label for="adresa">Adresa:</label>
-        <input type="text" name="adresa" id="adresa">
-<br>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
-        <br>
-        <label for="telefon">Telefon:</label>
-        <input type="tel" name="telefon" id="telefon">
-        <br>
-        <label for="doprava">Způsob dopravy:</label>
-        <select name="doprava" id="doprava">
+          <h2>Informace o Zákazníkovi</h2>
+          <div>
+            <label for="jmeno">Jméno:</label>
+            <input type="text" name="jmeno" id="jmeno" />
+          </div>
+          <label for="adresa">Adresa:</label>
+          <input type="text" name="adresa" id="adresa" />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+          <br />
+          <label for="telefon">Telefon:</label>
+          <input type="tel" name="telefon" id="telefon" />
+          <br />
+          <label for="doprava">Způsob dopravy:</label>
+          <select name="doprava" id="doprava">
             <option value="kurýr">Kurýrem</option>
             <option value="osobní_vyzvednutí">Osobní vyzvednutí</option>
-        </select>
-         
-        <label for="platba">Způsob platby:</label>
-        <select name="platba" id="platba">
+          </select>
+
+          <label for="platba">Způsob platby:</label>
+          <select name="platba" id="platba">
             <option value="hotovost">Hotovostí při vyzvednutí</option>
             <option value="kartou">Kartou online</option>
-        </select>
-    </div> 
-        <input type="submit" value="Odeslat objednávku">
-    </form>
-</div>
-    <footer>
-        <p>&copy; Studenti PEF 2023 - Všechna práva vyhrazena.</p>
-    </footer>
+          </select>
+        </div>
+        <input type="submit" value="Odeslat objednávku" />
+      </form>
+    </div>
+    <div id="footerContainer"></div>
     <script src="./functions/header.js"></script>
-</body>
+    <script src="./functions/footer.js"></script>
+  </body>
 </html>
