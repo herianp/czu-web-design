@@ -1,57 +1,84 @@
 :root {
+  /* Existing variables */
   --dark-black-color: #1e2326;
   --dark-green-color: #9AF29D;
+
+  /* Additional color variables */
+  --body-bg-color: #ffffff;
+  --header-bg-color: #4caf50;
+  --text-color-white: white;
+  --header-search-bg-color: black;
+  --article-bg-color: white;
+
+  /* Spacing variables */
+  --header-padding-top: 5px;
+  --header-padding-bottom: 5px;
+  --nav-padding: 1em;
+  --nav-link-margin: 0 15px;
+  --courses-container-margin-vertical: 5%;
+  --courses-container-margin-horizontal: 10%;
+  --article-padding: 1em;
+  --article-margin: 1em;
 }
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: var(--body-bg-color);
 }
+
 header {
-  background-color: #4caf50;
-  color: white;
+  background-color: var(--header-bg-color);
+  color: var(--text-color-white);
   text-align: center;
-  padding-top: 5px;
+  padding-top: var(--header-padding-top);
 }
+
 header h3 {
   margin: 0;
-  padding-bottom: 5px;
+  padding-bottom: var(--header-padding-bottom);
 }
+
 .header-search {
-  background-color: black;
+  background-color: var(--header-search-bg-color);
   text-align: left;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  padding: var(--nav-padding);
   background-color: var(--dark-black-color);
 }
+
 nav a {
-  color: white;
-  margin: 0 15px;
+  color: var(--text-color-white);
+  margin: var(--nav-link-margin);
   text-decoration: none;
   font-weight: bold;
 }
+
 .courses-container {
-  margin: 0;
-  margin: 5% 10%;
+  margin: var(--courses-container-margin-vertical) var(--courses-container-margin-horizontal);
 }
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .nav-container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 article {
-  background-color: white;
-  padding: 1em;
-  margin: 1em;
+  background-color: var(--article-bg-color);
+  padding: var(--article-padding);
+  margin: var(--article-margin);
   width: 80%;
 }
 /* Mobilni sekce CSS */
