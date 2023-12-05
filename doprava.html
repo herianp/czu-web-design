@@ -39,20 +39,20 @@
     display: none;
   }
   #submit-containerinput {
-    margin-top: 20px; /* Odstup mezi tlačítkem a předchozími prvky */
-    width: 200px; /* Šířka tlačítka */
-    height: 50px; /* Výška tlačítka */
-    font-size: 18px; /* Velikost písma tlačítka */
-    display: block; /* Blokový prvek umožňuje nastavení šířky a zarovnání */
-    margin: 0 auto; /* Zarovnání na střed */
+    margin-top: 20px; 
+    width: 200px; 
+    height: 50px; 
+    font-size: 18px; 
+    display: block; 
+    margin: 0 auto; 
 }
 .location-option {
-  display: flex; /* Display radio button and label in a row */
-  align-items: center; /* Center vertically */
-  margin-bottom: 10px; /* Add spacing between options */
-  border: 1px solid #ccc; /* Add border for a framed look */
-  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
-  padding: 8px; /* Optional: Add padding for spacing inside the frame */
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  padding: 8px;
 }
     </style>
   </head>
@@ -166,11 +166,11 @@
     }
   });
 
-  // Initially hide the kartouCast and show the hotovostCast
+  
   kartouCast.style.display = "none";
   hotovostCast.style.display = "block";
 
-  // Additional logic to toggle checkboxes based on the initial selection
+  
   if (platbaSelect.value === "kartou") {
     document.querySelectorAll('input[name="adresa-platby[]"]').forEach(function (checkbox) {
       checkbox.checked = false;
