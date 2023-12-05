@@ -1,111 +1,72 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-shop s Kurzy</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <style>
-.form1-grid div {
-            margin-bottom: 10px;
-        }
+      .form1-grid div {
+        margin-bottom: 10px;
+      }
 
-        .form1-grid label {
-            display:block;
-            margin-bottom: 5px;
-        }
-
+      .form1-grid label {
+        display: block;
+        margin-bottom: 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="headerContainer"></div>
-    <section class="courses-container">
-        
-        
-    </section>
+    <section class="courses-container"></section>
     <div class="grid-back">
-        <article class="header-grid">
-            <h1>Informace o Dopravě</h1>
-            <p>Vyplňte následující infomace.</p>
-        </article>
-        <form action="zpracuj_objednavku.php" method="post" class="form1-grid">
-            <div>
-                <h2>Informace o Zákazníkovi</h2>
-                <div>
-                    <label for="jmeno">Jméno:</label>
-                    <input type="text" name="jmeno" id="jmeno">
-                </div>
-                <label for="adresa">Adresa:</label>
-                <input type="text" name="adresa" id="adresa">
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
-                <br>
-                <label for="telefon">Telefon:</label>
-                <input type="tel" name="telefon" id="telefon">
-                <br>
-                <label for="doprava">Způsob dopravy:</label>
-                <select name="doprava" id="doprava">
-                    <option value="email">E-mail</option>
-                    <option value="osobní_vyzvednutí">Osobní vyzvednutí</option>
-                </select>
+    <article class="header-grid" >
+    <h1>Informace o Dopravě</h1>
+    <p>Vyplňte následující infomace.</p>
 
-                <label for="platba">Způsob platby:</label>
-                <select name="platba" id="platba">
-                    <option value="kartou">Kartou online</option>
-                    <option value="hotovost">Hotovostí na naší pobočce</option>
-                </select>
-            </div> 
-
-            <div id="platba-kartou">
-                <label for="jmeno-karty">Jméno a příjmení vlastníka karty:</label>
-                <input type="text" name="jmeno-karty" id="jmeno-karty">
-
-                <label for="cislo-karty">Číslo karty:</label>
-                <input type="text" name="cislo-karty" id="cislo-karty">
-
-                <label for="datum-platnosti">Datum platnosti karty:</label>
-                <input type="text" name="datum-platnosti" id="datum-platnosti">
-
-                <label for="cvc">CVC kód:</label>
-                <input type="text" name="cvc" id="cvc">
-            </div>
-            
-            <div id="platba-hotovost">
-                <label for="adresa-platby">Adresa pro platbu hotovostí:</label>
-                <input type="text" name="adresa-platby" id="adresa-platby">
-            </div>
-            
-            <input type="submit" value="Odeslat objednávku">
-        </form>
+</article>
+    <form action="zpracuj_objednavku.php" method="post" class="form1-grid">
+       <div >
+        <h2>Informace o Objednávce</h2>
+        <div>
+        <label for="produkt">Produkt:</label>
+        <input type="text" name="produkt" id="produkt">
     </div>
+        <label for="mnozstvi">Množství:</label>
+        <input type="number" name="mnozstvi" id="mnozstvi" min="0">
+
+        <h2>Informace o Zákazníkovi</h2>
+        <div>
+        <label for="jmeno">Jméno:</label>
+        <input type="text" name="jmeno" id="jmeno">
+    </div>
+        <label for="adresa">Adresa:</label>
+        <input type="text" name="adresa" id="adresa">
+<br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="telefon">Telefon:</label>
+        <input type="tel" name="telefon" id="telefon">
+        <br>
+        <label for="doprava">Způsob dopravy:</label>
+        <select name="doprava" id="doprava">
+            <option value="kurýr">Kurýrem</option>
+            <option value="osobní_vyzvednutí">Osobní vyzvednutí</option>
+        </select>
+         
+        <label for="platba">Způsob platby:</label>
+        <select name="platba" id="platba">
+            <option value="hotovost">Hotovostí při vyzvednutí</option>
+            <option value="kartou">Kartou online</option>
+        </select>
+    </div> 
+        <input type="submit" value="Odeslat objednávku">
+    </form>
+</div>
     <footer>
         <p>&copy; Studenti PEF 2023 - Všechna práva vyhrazena.</p>
     </footer>
     <script src="./functions/header.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var platbaSelect = document.getElementById("platba");
-            var kartouCast = document.getElementById("platba-kartou");
-            var hotovostCast = document.getElementById("platba-hotovost");
-
-            // Nastavit výchozí stav
-            kartouCast.style.display = "block";
-            hotovostCast.style.display = "none";
-
-            platbaSelect.addEventListener("change", function () {
-                if (platbaSelect.value === "kartou") {
-                    kartouCast.style.display = "block";
-                    hotovostCast.style.display = "none";
-                } else if (platbaSelect.value === "hotovost") {
-                    kartouCast.style.display = "none";
-                    hotovostCast.style.display = "block";
-                } else {
-                    kartouCast.style.display = "none";
-                    hotovostCast.style.display = "none";
-                }
-            });
-        });
-    </script>
 </body>
 </html>

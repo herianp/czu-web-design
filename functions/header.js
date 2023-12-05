@@ -1,9 +1,10 @@
-window.onload = function() {    
+window.addEventListener('load', function() { 
     var headerContent = `
     <header>                        
         <h3>Vítejte v našem E-shopu s Kurzy!</h3>
         <nav class="pc-nav">
             <div class="nav-container">
+            <img src="../img/siroke_logo_web.png" alt="Rodeo logo" style="width:150px">
                 <a href="index.html">Domů</a>
                 <a href="kategorie.html">Kategorie</a>
                 <a href="kontakty.html">Kontakt</a>
@@ -47,4 +48,4 @@ window.onload = function() {
     `;
 
     document.getElementById("headerContainer").innerHTML = headerContent;
-}
+});
