@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
         <h3>Vítejte v našem E-shopu s Kurzy!</h3>
         <nav class="pc-nav">
             <div class="nav-container">
-            <img src="../img/siroke_logo_web.png" alt="Rodeo logo" style="width:150px">
+            <img src="img/siroke_logo_web.png" alt="Rodeo logo" style="width:150px">
                 <a href="index.html">Domů</a>
                 <a href="kategorie.html">Kategorie</a>
                 <a href="kontakty.html">Kontakt</a>
