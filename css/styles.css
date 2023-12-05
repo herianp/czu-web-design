@@ -18,6 +18,10 @@ header h3 {
   margin: 0;
   padding-bottom: 5px;
 }
+.header-search {
+  background-color: black;
+  text-align: left;
+}
 nav {
   display: flex;
   justify-content: space-between;
