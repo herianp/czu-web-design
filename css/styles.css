@@ -385,7 +385,6 @@ grid-row-end: row2;
 
 margin: 0;
 padding: 0;
-
 }
 
 .form1-grid{
@@ -393,7 +392,8 @@ padding: 0;
 grid-column-end: col4;
 grid-row-start: row2;
 grid-row-end: bottom;
-
+background-color: #f2f2f2;
+border: 2px solid #000000;
 
 
 }

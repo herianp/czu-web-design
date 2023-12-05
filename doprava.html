@@ -14,32 +14,59 @@
         display: block;
         margin-bottom: 5px;
       }
+      #platba-kartou {
+    border: 1px solid #cccccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+
+
+  .form1-grid input,
+  .form1-grid select {
+    grid-column: 2;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  #platba-kartou {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none;
+  }
+  #submit-containerinput {
+    margin-top: 20px; /* Odstup mezi tlačítkem a předchozími prvky */
+    width: 200px; /* Šířka tlačítka */
+    height: 50px; /* Výška tlačítka */
+    font-size: 18px; /* Velikost písma tlačítka */
+    display: block; /* Blokový prvek umožňuje nastavení šířky a zarovnání */
+    margin: 0 auto; /* Zarovnání na střed */
+}
+.location-option {
+  display: flex; /* Display radio button and label in a row */
+  align-items: center; /* Center vertically */
+  margin-bottom: 10px; /* Add spacing between options */
+  border: 1px solid #ccc; /* Add border for a framed look */
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  padding: 8px; /* Optional: Add padding for spacing inside the frame */
+}
     </style>
   </head>
   <body>
     <div id="headerContainer"></div>
     <section class="courses-container"></section>
     <div class="grid-back">
-    <article class="header-grid" >
+    <div class="header-grid" >
     <h1>Informace o Dopravě</h1>
-    <p>Vyplňte následující infomace.</p>
-
-</article>
+    </div>
     <form action="zpracuj_objednavku.php" method="post" class="form1-grid">
        <div >
-        <h2>Informace o Objednávce</h2>
-        <div>
-        <label for="produkt">Produkt:</label>
-        <input type="text" name="produkt" id="produkt">
-    </div>
-        <label for="mnozstvi">Množství:</label>
-        <input type="number" name="mnozstvi" id="mnozstvi" min="0">
 
-        <h2>Informace o Zákazníkovi</h2>
-        <div>
-        <label for="jmeno">Jméno:</label>
-        <input type="text" name="jmeno" id="jmeno">
-    </div>
+        
         <label for="adresa">Adresa:</label>
         <input type="text" name="adresa" id="adresa">
 <br>
@@ -51,8 +78,8 @@
         <br>
         <label for="doprava">Způsob dopravy:</label>
         <select name="doprava" id="doprava">
-            <option value="kurýr">Kurýrem</option>
-            <option value="osobní_vyzvednutí">Osobní vyzvednutí</option>
+            <option value="email">E-mail</option>
+            <option value="osobní_vyzvednutí">Osobní vyzvednutí </option>
         </select>
          
         <label for="platba">Způsob platby:</label>
@@ -60,13 +87,112 @@
             <option value="hotovost">Hotovostí při vyzvednutí</option>
             <option value="kartou">Kartou online</option>
         </select>
-    </div> 
-        <input type="submit" value="Odeslat objednávku">
-    </form>
+        <div id="platba-hotovost">
+          <label>Vyberte místo pro platbu hotovostí:</label>
+          <div class="location-option"> 
+            <label for="moznost1">Národní 123, Praha</label>
+            <input type="radio" name="adresa-platby" id="moznost1" value="moznost1">
+          </div>
+        
+          <div class="location-option">
+            <label for="moznost2">Klánovický park 1, Klánovice</label>
+            <input type="radio" name="adresa-platby" id="moznost2" value="moznost2">
+          </div>
+        
+          <div class="location-option">
+            <label for="moznost3">U Hermana 9, Svépravice</label>
+            <input type="radio" name="adresa-platby" id="moznost3" value="moznost3">
+          </div>
+      </div>
+      
+        <div id="platba-kartou">
+          <h1>Údaje o kartě</h1>
+          <label for="jmeno-karty">Vlastník Karty:</label>
+          <input type="text" name="jmeno-karty" id="jmeno-karty" placeholder="Tomáš Heryán">
+      
+          <label for="cislo-karty">Číslo karty:</label>
+          <input type="text" name="cislo-karty" id="cislo-karty" placeholder="2002 4105 1111 8511">
+      
+          <label for="datum-platnosti">Datum platnosti karty:</label>
+          <input type="text" name="datum-platnosti" id="datum-platnosti" placeholder="08/26">
+      
+          <label for="cvc">CVC kód:</label>
+          <input type="text" name="cvc" id="cvc" placeholder="123">
+         
+      </div>
+   
 </div>
+</div> 
+<input  id= "submit-containerinput"type="submit" value="Odeslat objednávku">
+</form>
     <footer>
         <p>&copy; Studenti PEF 2023 - Všechna práva vyhrazena.</p>
     </footer>
     <script src="./functions/header.js"></script>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-shop s Kurzy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .form1-grid label {
+            grid-column: 1;
+        }
+
+        .form1-grid input {
+            grid-column: 2;
+        }
+
+        .form1-grid input.error {
+            border: 1px solid red; /* Přidání rámce červené barvy pro označení chyby */
+        }
+
+        .error-message {
+            color: red;
+            grid-column: span 2;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  var platbaSelect = document.getElementById("platba");
+  var kartouCast = document.getElementById("platba-kartou");
+  var hotovostCast = document.getElementById("platba-hotovost");
+
+  platbaSelect.addEventListener("change", function () {
+    if (platbaSelect.value === "kartou") {
+      kartouCast.style.display = "block";
+      hotovostCast.style.display = "none";
+    } else if (platbaSelect.value === "hotovost") {
+      kartouCast.style.display = "none";
+      hotovostCast.style.display = "block";
+    } else {
+      kartouCast.style.display = "none";
+      hotovostCast.style.display = "none";
+    }
+  });
+
+  // Initially hide the kartouCast and show the hotovostCast
+  kartouCast.style.display = "none";
+  hotovostCast.style.display = "block";
+
+  // Additional logic to toggle checkboxes based on the initial selection
+  if (platbaSelect.value === "kartou") {
+    document.querySelectorAll('input[name="adresa-platby[]"]').forEach(function (checkbox) {
+      checkbox.checked = false;
+    });
+  }
+});
+    </script>
+
